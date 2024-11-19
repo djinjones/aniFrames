@@ -1,0 +1,13 @@
+{
+  "name": "aniframes",
+  "version": "0.0.1",
+  "type": "module",
+    "scripts": {
+  "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+  "client": "npm run dev --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+
+}

@@ -1,0 +1,92 @@
+[
+    {
+        "Konosuba!": {
+            "titles": {
+                "alternate": [
+                    "Konosuba!",
+                    "Konosuba: God's Blessing on this Wonderful World",
+                    "Kono Subarashii Sekai ni Shukufuku wo!"
+                ]
+            },
+            "characters": {
+                "Aqua": {
+                    "imageUrl": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/42a069ca-9560-4a89-bb19-9835be16d2b0/width=450/00392-3840711279.jpeg",
+                    "alternateNames": ["Aqua"]
+                },
+                "Kazuma Satou": {
+                    "imageUrl": "https://cdn.myanimelist.net/images/characters/8/301302.jpg",
+                    "alternateNames": ["Kazuma Satou", "Satou, Kazuma"]
+                }
+            },
+            "images": {
+                "main": "https://static.wikia.nocookie.net/konosuba/images/e/e4/Green_Giant_Toads_Anime.jpg",
+                "alternate": [
+                    "https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/12/konosuba-beldia.jpg",
+                    "https://static.wikia.nocookie.net/animevice/images/d/dd/Eris_%28KONOSUBA_Ep_07%29.png/revision/latest?cb=20160225084950",
+                    "https://i.ytimg.com/vi/Yf3yO5r4LG8/hq720.jpg?sqp=-oaymwEXCK4FEIIDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAwt-dL1-TsRUl0v0PyIyXrlisyXQ"
+                ]
+            }
+        }
+    },
+    {
+        "That time I got reincarnated as a slime": {
+            "titles": {
+                "alternate": [
+                    "That Time I Got Reincarnated As A Slime",
+                    "Tensei Shitara Suraimu Datta Ken",
+                    "TenSura"
+                ]
+            },
+            "characters": {
+                "Rimiru Tempest": {
+                    "imageUrl": "https://cdn.myanimelist.net/images/about_me/ranking_items/5686299-98a0aa84-0928-44a6-9d1e-f3426cf08b15.png?t=1716796039",
+                    "alternateNames": ["Rimiru Tempest", "Mikami Satoru"]
+                },
+                "Diablo": {
+                    "imageUrl": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/e2d43d46-bb0f-4373-961a-afb56eb10794/width=450/c0fdf12dfd91fd25e03548ce2914b9afd01c0e6412f32643cdd68f5973d7ba8a_aamAnyloraAnimeMixAnime_v1.jpeg",
+                    "alternateNames": ["Diablo", "Noir", "Primordial Black"]
+                }
+            },
+            "images": {
+                "main": "https://animesolution.com/wp-content/uploads/2019/12/Tensei-Shitara-Slime-Datta-Ken-OAD-01_01.38_2019.12.20_14.15.09_stitch.jpg",
+                "alternate": [
+                    "https://dkeonvn7j9sk.cloudfront.net/wp-content/uploads/2024/04/12123511/Tensura_S3_E2_CoverImage.jpg",
+                    "https://moesucks.com/wp-content/uploads/2019/02/tensei-shitara-slime-datta-ken-21-2.jpg",
+                    "https://staticg.sportskeeda.com/editor/2023/03/f2fff-16800872114816-1920.jpg"
+                ]
+            }
+        }
+    },
+    {
+        "The Eminence in Shadow": {
+            "titles": {
+                "alternate": [
+                    "The Eminence in Shadow",
+                    "Kage no Jitsuryokusha ni Naritakute!"
+                ]
+            },
+            "characters": {
+                "Shadow": {
+                    "imageUrl": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/eb7c74de-b24d-4916-a7ee-f2af6c898f0a/width=1200/eb7c74de-b24d-4916-a7ee-f2af6c898f0a.jpeg",
+                    "alternateNames": ["Shadow", "Cid Kagenou", "John Smith"]
+                },
+                "Alpha": {
+                    "imageUrl": "https://m.media-amazon.com/images/I/61XgpKTpuwL._AC_UF894,1000_QL80_.jpg",
+                    "alternateNames": ["Alpha"]
+                },
+                "Delta": {
+                    "imageUrl": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/7850bbd5-42bf-4108-9cdf-7d8828696647/width=450/shadowdelta-7326d-1981516453.jpeg",
+                    "alternateNames": ["Delta"]
+                }
+            },
+            "images": {
+                "main": "https://i.ytimg.com/vi/Cuzq3RDqKRQ/maxresdefault.jpg",
+                "alternate": [
+                    "https://m.media-amazon.com/images/M/MV5BNjcxNTY3NDAtZGU0MS00MDQwLTk0MDgtYTJhODk1NWM0NzAyXkEyXkFqcGdeQWRpZWdtb25n._V1_QL75_UX500_CR0,0,500,281_.jpg",
+                    "https://www.animenewsnetwork.com/hotlink/thumbnails/crop1200x630gUY/cms/episode-review.3/191015/ffaixihvqaeeh46.jpg",
+                    "https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/12/the-eminence-in-shadow-john-smith.jpg"
+                ]
+            }
+        }
+    }
+]
