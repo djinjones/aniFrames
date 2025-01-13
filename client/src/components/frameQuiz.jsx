@@ -17,4 +17,4 @@ return(
     </div>
 )};
 
-export default FrameQuiz();
+export default FrameQuiz;

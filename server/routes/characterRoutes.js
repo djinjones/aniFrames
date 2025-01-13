@@ -14,6 +14,16 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/newGame', async (req, res) => {
+  try {
+    res.json('Rimiru Tempest');
+    console.log('new game started by a client');
+  }catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+  
+})
+
 // Protected route: Only admin or owner can add new characters
 router.post('/', authorizeAdminOrOwner, async (req, res) => {
   try {

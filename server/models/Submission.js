@@ -1,3 +1,4 @@
+const { required } = require('joi');
 const { Schema, model } = require('mongoose');
 
 const submissionSchema = new Schema({
@@ -16,11 +17,17 @@ const submissionSchema = new Schema({
         type: String,
     }],
     characterImages: [{
-        type: String,
+        name: { type: String, required: true }, // Character name
+        url: { type: String, required: true },  // Image URL
     }],
     date: {
         type: Date,
         default: Date.now,
+    },
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true,
     }
 
 }, { timestamps: true });

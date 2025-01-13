@@ -26,6 +26,16 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/animes', async (req, res) => {
+  try {
+    const animes = await Anime.find(); // Fetch all anime documents
+    res.status(200).json(animes);
+  } catch (err) {
+    console.error('Error fetching animes:', err);
+    res.status(500).json({ message: 'Error fetching animes' });
+  }
+});
+
 // Helper function to select `n` random elements from an array
 function getRandomImages(imageArray, n) {
   if (!Array.isArray(imageArray)) return [];

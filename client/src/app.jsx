@@ -6,17 +6,25 @@ import Modal from './components/modal';
 import LoginModal from './components/LoginModal';
 import SignupModal from './components/SignupModal';
 import DailyQuiz from './components/dailyQuiz';
-import frameQuiz from './components/frameQuiz';
+import FrameQuiz from './components/frameQuiz';
 import CharacterQuiz from './components/characterQuiz';
 import About from './components/about';
 import News from './components/News';
-import { useState } from 'react';
-import FrameQuiz from './components/frameQuiz';
+import Submission from './adminComponents/submission.jsx';
+import Admin from './adminComponents/admin.jsx'
+import { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+import AuthContext from './utils/authContext.jsx';
+
 
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [modalType, setModalType] = useState(''); // 'login' or 'signup'
+  let adminType;
+  const { authInfo, isLoggedIn, login, logout } = useContext(AuthContext);
+  if (authInfo) {console.log(authInfo.username, ':authInfo.username', authInfo.adminType); adminType = authInfo.adminType;}
 
+  
   const handleOpenModal = (type) => {
     setModalType(type);
     setShowModal(true);
@@ -28,14 +36,17 @@ function App() {
   };
 
   const handleLogin = (credentials) => {
-    console.log('Login:', credentials);
-    // Perform login logic here
+    login();
     handleCloseModal();
   };
 
+  const handleLogout = () => {
+    logout()
+  }
+
   const handleSignup = (credentials) => {
     console.log('Signup:', credentials);
-    // Perform signup logic here
+    
     handleCloseModal();
   };
 
@@ -58,26 +69,32 @@ function App() {
         </Modal>
 
         <div className="header">
-          <a
+          {isLoggedIn ? ( <a 
+            className="header-element login-header" 
+            onClick={() => handleLogout()}>Logout</a> 
+            ) : ( <a
             onClick={() => handleOpenModal('login')}
             className="header-element login-header"
-          >
-            Login
-          </a>
-          <h2 className="page-title header-element">AniFrames</h2>
+          >Login</a> )}
 
-          <p className="logged-in">Logged In as: </p>
+          {isLoggedIn && (adminType === 'admin' || adminType === 'owner')? (<Link 
+          className='header-element admin-header'
+          to='/admin'>Admin</Link>
+          ) : (<></>) }
+          
+          <Link to='/' className="page-title header-element">AniFrames</Link>
+          
         </div>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<About handleOpenModal={handleOpenModal} />} />
           <Route path="/news" element={<News />} />
           <Route path="/frame" element={<FrameQuiz />} />
           <Route path="/character" element={<CharacterQuiz />} />
           <Route path="/daily" element={<DailyQuiz />} />
+          <Route path="/submission" element={<Submission />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
-
-        <Home />
         <Footer />
       </div>
     </Router>

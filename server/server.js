@@ -1,11 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
+//const cors = require('cors');
 const dotenv = require('dotenv');
 dotenv.config({path: '../.env'});
-const animeRoutes = require('./routes/animeRoutes');
-const userRoutes = require('./routes/userRoutes');
-const characterRoutes = require('./routes/characterRoutes');
+const routes = require('./routes')
 
 dotenv.config();
 
@@ -15,21 +13,19 @@ const MONGO_URI = process.env.MONGO_URI_ALT
 
 //console.log('Mongo URI:', process.env.MONGO_URI);
 
-app.use(cors({
-  origin: 'http://localhost:3000', // Allow only your React frontend
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Optional: Limit allowed methods
-  credentials: true, // Optional: Allow cookies and credentials
-}));
+// app.use(cors({
+//   origin: 'http://localhost:3000', // Allow only your React frontend
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Optional: Limit allowed methods
+//   credentials: true, // Optional: Allow cookies and credentials
+// }));
 app.use(express.json());
 
 // Routes
-app.use('/api/anime', animeRoutes);
-app.use('/api/characters', characterRoutes);
-app.use('/api/users', userRoutes);
+app.use('/api', routes)
 
 
 app.get('/', (req, res) => {
-  res.send('Welcome to the AniFrames!');
+  res.send('Welcome to AniFrames!');
 });
 
 // Mongoose connection

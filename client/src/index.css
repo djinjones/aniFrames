@@ -18,34 +18,35 @@ body {
     width: 100%;
     text-align: center;
     z-index: 1000;
-
+    background-color: var(--background);
 }
 
+.page-title {
+    position: absolute;
+    margin-left: 50%;
+    font-size: 1.8rem;
+}
 
-.login-header {
-    margin-left: 40px;
-    margin-right: auto;
+.header-element {
+    padding: 15px 5%;
     color: var(--text);
     border: none;
-    font-size: 1.1rem;
+    text-decoration: none;
+    color: white;
 }
 
-.login-header:hover {
+.header-element:hover {
     transition: all 0.3s ease;
     filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
     transform: scale(1.1);
     cursor: pointer;
 }
 
-
-.logged-in {
-    margin-right: 40px;
-    margin-left: auto;
-}
-
+/*--------------------------------------------------Home--------------------------------------------------*/
 .home {
     margin-top: 60px;
     width: 100%;
+    
 }
 
 .mid {
@@ -54,14 +55,14 @@ body {
     align-items: left;
     color: black;
     width: 100%;
-    min-height: 100vh;
     background-image: url('./assets/images/bg3.webp');
     background-size: cover;
 }
 
-.welcome-box {
+.mid-content {
     margin-top: 15%;
-}
+    margin-bottom: 15%;
+}/* change this when adjusting @media */
 
 .mid-box {
     display: flex;
@@ -101,25 +102,25 @@ body {
     color: black;
 }
 
-.comming-soon {
-    position: relative; /* Ensure this element is the reference for positioning the ::after */
+.coming-soon {
+    position: relative;
 }
 
-.comming-soon::after {
-    content: "Coming Soon"; /* Text to display */
-    position: absolute; /* Position relative to the .comming-soon element */
-    top: 0; /* Align to the top */
-    right: 0; /* Align to the right */
-    background-color: red; /* Background color for the badge */
-    color: white; /* Text color */
-    font-size: 0.8rem; /* Font size for the badge */
-    font-weight: bold; /* Bold text */
-    padding: 2px 5px; /* Padding for the badge */
-    border-radius: 5px; /* Rounded corners for the badge */
-    z-index: 10; /* Ensure the badge is above other content */
-    white-space: nowrap; /* Prevents text wrapping */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
-    pointer-events: none; /* Prevent interactions with the badge */
+.coming-soon::after {
+    content: "Coming Soon-ish";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red; 
+    color: white; 
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 5px;
+    z-index: 10;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
 }
 
 .footer {
@@ -173,6 +174,8 @@ body {
 
 }
 
+
+/*--------------------------------------------------Quiz*--------------------------------------------------*/
 .quiz {
     min-width: 60vw;
     min-height: 60vh;
@@ -254,6 +257,183 @@ body {
     margin: 50px;
 }
 
+/*--------------------------------------------------About--------------------------------------------------*/
+
+.about-page {
+    margin-top: 90px;
+    width: 80%;
+    line-height: 1.6; /* Improved text spacing */
+}
+
+.about-h2 {
+    font-size: 2rem;
+    color: #2d87ef; /* Add a primary theme color */
+    text-align: center; /* Center the headings */
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for pop */
+}
+
+.about-p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #dddddd;
+}
+
+.about-p a {
+    color: #2d87ef; /* Themed link color */
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.about-p a:hover {
+    color: #ff5722; /* Highlighted link color on hover */
+    cursor: pointer;
+}
+
+.about-section {
+    background-color: #353535; /* Light background for sections */
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px; /* Rounded corners for sections */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.aniguesser {
+    color: #2d87ef;
+}
+
+.about-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.about-recommendation {
+    text-align: center;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #8389c0;
+}
+
+
+/*--------------------------------------------------News--------------------------------------------------*/
+
+
+/*--------------------------------------------------Admin--------------------------------------------------*/
+
+.admin {
+    margin-top: 60px;
+    display: flex;
+    width: 100vw;
+    padding: 0px;
+    min-height: 70vh;
+}
+
+.admin-nav {
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+    margin-left: 0px;
+    padding: 0px;
+    width: 20%vw;
+    height: fill;
+    background-color: rgb(180, 180, 180);
+    
+
+}
+
+.admin-nav button {
+    font-size: 1.6rem;  
+    margin-bottom: 5px;
+    padding: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: rgb(180, 180, 180);
+    border-bottom: black solid 2px;
+    width: 100%;
+}
+
+.admin-nav button:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    border-bottom: black 7px solid;
+
+}
+
+.admin-control {
+    width: 100%;
+}
+
+/*--------------------------------------------------AdminAnime--------------------------------------------------*/
+
+.admin-anime {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    height: 100%;
+}
+
+.anime-search {
+    padding: 15px;
+    margin-left: 20px;
+    height: 100%;
+}
+
+.anime-search p {
+    font-size: 1.5rem;
+    padding: 0px;
+}
+
+.anime-search input{
+    font-size: 1.3rem;
+    padding: 10px;
+}
+
+.anime-list {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+    background-color: rgb(180, 180, 180);
+    color: black;
+}
+
+.anime-item {
+    margin-top: 10px;
+}
+
+.anime-result {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: black;
+}
+
+.anime-result h3 {
+    font-size: 1.2rem;
+}
+
+.anime-result p {
+    font-size: 1.1rem;
+}
+
+.admin-anime-form {
+    display: none;
+    background-color: rgb(180, 180, 180);
+    width: 80%;
+    height: 80%;
+}
+
+/*--------------------------------------------------Submission--------------------------------------------------*/
+
+.submission {
+    margin-top: 60px;
+}
+
 /*------------------------------------------------- Modal.css -------------------------------------------------*/
 .modal-overlay {
     position: fixed;
@@ -299,7 +479,10 @@ body {
     font-size: 1.4rem;
     border-radius: 9px;
     padding: 5px;
-    margin: 10px;
+    margin: 5px;
+    width: calc(100% - 20px); /* Adjust width to accommodate padding and the toggle icon */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+
   }
 
   .modal-button {
@@ -326,10 +509,46 @@ body {
   }
 
   .important-message {
+    color: rgb(182, 170, 2);
     text-decoration: underline;
     font-size: 1.1rem;
-    color: red;
   }
+
+  .success-message {
+    color: green;
+    font-weight: bold;
+    font-size: 1.1rem;
+
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+    font-size: 1.1rem;
+
+  }
+
+  .input-container {
+    position: relative;
+    margin: 5px; /* Same margin as other inputs for consistent spacing */
+    width: 100%; /* Ensure it spans the full width */
+  }
+  
+  .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 23px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2rem; /* Adjust size as needed */
+    color: gray; /* Optional: Match style with input */
+}
+
+  .input-container input {
+    padding-right: 35px; /* Add space to prevent the text from overlapping the icon */
+}
+  
+  
 
   
   

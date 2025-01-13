@@ -7,8 +7,6 @@ import linkedInIcon from '../assets/In-White-128.png';
 function Footer({ hasLoggedIn }) {
     const [displayAgreement, setDisplayAgreement] = useState(false);
 
-   
-
     const handleModalOpen = () => {
         setDisplayAgreement(true);
     };

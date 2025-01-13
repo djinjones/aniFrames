@@ -1,5 +1,6 @@
 import quizData from '../../charNames.json';
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function CharacterQuiz() {
     const [gameInProgress, setGameInProgress] = useState(false);
@@ -65,28 +66,38 @@ function CharacterQuiz() {
         };
     };
     
-    
-    
 
-    function handleStartGame() {
-        setGameInProgress(true);
-        const newCards = [];
-        const usedCharacters = new Set(); // Initialize the usedCharacters set
+    async function handleStartGame() {
+        try {
+            setGameInProgress(true);
 
-        // Generate unique cards
-        while (newCards.length < 4) {
-            const animeData = getRandomAnimeData(usedCharacters);
-            if (animeData) {
-                newCards.push(animeData);
-                usedCharacters.add(animeData.characterName); // Add to the set to track used characters
-            } else {
-                break; // No more unique characters available
+
+            const newCards = [];
+            const usedCharacters = new Set(); // Initialize the usedCharacters set
+
+            // Generate unique cards from API response
+            for (const animeData of characters) {
+                if (!usedCharacters.has(animeData.characterName) && newCards.length < 4) {
+                    newCards.push(animeData);
+                    usedCharacters.add(animeData.characterName); // Add to the set to track used characters
+                }
             }
-        }
 
-        setCards(newCards);
-        console.log('New Cards:', newCards);
+            setCards(newCards);
+            console.log('New Cards:', newCards);
+
+            
+            // Make GET request to the API
+            const response = await axios.get('/api/character/newGame');
+            const rimiru = response.data;
+            console.log(rimiru, ": response from server (should say rimiru tempest)")
+
+        } catch (error) {
+            console.error('Error starting game:', error);
+        }
     }
+
+    
 
     function handleTitleInput(event, index) {
         const userInput = event.target.value.toLowerCase();
